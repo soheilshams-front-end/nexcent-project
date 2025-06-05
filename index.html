@@ -1,17 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nexcent</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" /> <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
     <header class="site-header">
         <div class="container">
-            <a href="#" class="logo"><span>Nexcent</span></a>
-            <nav class="main-navigation">
+            <a href="#" class="logo" data-aos="fade-down"><span>Nexcent</span></a>
+            <nav class="main-navigation" data-aos="fade-down" data-aos-delay="100">
                 <ul>
                     <li><a href="#">Home</a></li>
                     <li><a href="#">Features</a></li>
@@ -20,232 +23,277 @@
                     <li><a href="#">Pricing</a></li>
                 </ul>
             </nav>
-            <i class="js__menu"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-              </svg>
-              </i>
-            <a href="#" class="button button-primary">Register Now</a>
+            <div class="header-actions" data-aos="fade-down" data-aos-delay="200">
+                <i class="js__menu hamburger-icon"> <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                    </svg>
+                </i>
+                <a href="#" class="button button-primary header-register-button">Register Now</a>
+            </div>
         </div>
     </header>
-    <section class="hero-section">
-        <div class="container hero-container">  <div class="hero-text">
-                <h1><span>Lessons and</span>  <span>insights</span>  <br> <span>from 8 years</span></h1>
-                <p>Where to grow your business as a photographer: site or social media?</p>
-                <a href="#" class="button button-primary hero-button">Register</a>
+
+    <main>
+        <section class="hero-section">
+            <div class="container hero-container">
+                <div class="hero-text" data-aos="fade-right" data-aos-duration="800">
+                    <h1><span>Lessons and</span>  <span>insights</span>  <br> <span>from 8 years</span></h1>
+                    <p>Where to grow your business as a photographer: site or social media?</p>
+                    <a href="#" class="button button-primary hero-button">Register</a>
+                </div>
+                <div class="hero-image" data-aos="fade-left" data-aos-duration="800" data-aos-delay="200">
+                    <img src="./Illustration.svg" alt="Business Illustration">
+                </div>
             </div>
-            <div class="hero-image">
-                <img src="./Illustration.svg" alt="Business Illustration">
+            <div class="hero-carousel-dots" data-aos="fade-up" data-aos-delay="400">
+                </div>
+        </section>
+
+        <section class="clients-section">
+            <div class="container">
+                <h2 class="section-title" data-aos="fade-up"><span>Our Clients</span></h2>
+                <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">We have been working with some Fortune 500+ clients</p>
+                <div class="client-logos" data-aos="zoom-in-up" data-aos-delay="200">
+                    <img src="./Logo.svg" alt="Client Logo 1" data-aos="zoom-in" data-aos-delay="250">
+                    <img src="./Logo (1).svg" alt="Client Logo 2" data-aos="zoom-in" data-aos-delay="300">
+                    <img src="./Logo (2).svg" alt="Client Logo 3" data-aos="zoom-in" data-aos-delay="350">
+                    <img src="./Logo (3).svg" alt="Client Logo 4" data-aos="zoom-in" data-aos-delay="400">
+                    <img src="./Logo (4).svg" alt="Client Logo 5" data-aos="zoom-in" data-aos-delay="450">
+                    <img src="./Logo (5).svg" alt="Client Logo 6" data-aos="zoom-in" data-aos-delay="500">
+                    <img src="./Logo (6).svg" alt="Client Logo 7" data-aos="zoom-in" data-aos-delay="550">
+                </div>
             </div>
-        </div>
-        <div class="hero-carousel-dots">
+        </section>
+
+        <section class="manage-community-section">
+            <div class="container">
+                <h2 class="section-title" data-aos="zoom-in"><span>Manage your entire community in a single system</span></h2>
+                <p class="section-subtitle" data-aos="zoom-in" data-aos-delay="100">Who is Nexcent suitable for?</p>
+                <div class="feature-blocks-container">
+                    <div class="feature-block" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="feature-icon">
+                            <img src="./Icon.svg" alt="Membership Icon">
+                        </div>
+                        <h3 class="feature-title"><span>Membership Organisations</span></h3>
+                        <p class="feature-description">Our membership management software provides full automation of membership renewals and payments</p>
+                    </div>
+                    <div class="feature-block" data-aos="zoom-in" data-aos-delay="300">
+                        <div class="feature-icon">
+                            <img src="./Icon (1).svg" alt="National Associations Icon">
+                        </div>
+                        <h3 class="feature-title"><span>National Associations</span></h3>
+                        <p class="feature-description">Our membership management software provides full automation of membership renewals and payments</p>
+                    </div>
+                    <div class="feature-block" data-aos="zoom-in" data-aos-delay="400">
+                        <div class="feature-icon">
+                            <img src="./Icon (2).svg" alt="Clubs And Groups Icon">
+                        </div>
+                        <h3 class="feature-title"><span>Clubs And Groups</span></h3>
+                        <p class="feature-description">Our membership management software provides full automation of membership renewals and payments</p>
+                    </div>
+                </div>
             </div>
-    </section>
+        </section>
+
+        <section class="detailed-feature-section">
+            <div class="container detailed-feature-layout">
+                <div class="detailed-feature-image" data-aos="zoom-in-right" data-aos-duration="700">
+                    <img src="./Frame 35.svg" alt="Pixelgrade Story Illustration"> </div>
+                <div class="detailed-feature-text" data-aos="fade-left" data-aos-delay="200" data-aos-duration="700">
+                    <h2><span>The unseen of spending three</span><br><span>years at Pixelgrade </span></h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet justo ipsum. Sed accumsan quam vitae est varius fringilla. Pellentesque placerat vestibulum lorem sed porta. Nullam mattis tristique iaculis. Nullam pulvinar sit amet risus pretium auctor. Etiam quis massa pulvinar, aliquam quam vitae, tempus sem. Donec elementum pulvinar odio.</p>
+                    <a href="#" class="button button-primary">Learn More</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="stats-section">
+            <div class="container stats-layout">
+              <div class="stats-text-column" data-aos="fade-right" data-aos-duration="700">
+                <h2><span>Helping a local business</span> <span>reinvent itself</span></h2>
+                <p>We reached here with our hard work and dedication</p>
+              </div>
+              <div class="stats-grid-column" data-aos="zoom-in" data-aos-delay="200" data-aos-duration="700">
+                <div class="stat-item">
+                  <div class="stat-icon"><img src="./Icon (3).svg" alt="Icon"></div> <div class="stat-details">
+                    <div class="stat-value"><span>2,245,341</span></div>
+                    <div class="stat-label">Members</div>
+                  </div>
+                </div>
+                <div class="stat-item">
+                  <div class="stat-icon"><img src="./Icon (7).svg" alt="Icon"></div> <div class="stat-details">
+                    <div class="stat-value"><span>46,328</span></div>
+                    <div class="stat-label">Clubs</div>
+                  </div>
+                </div>
+                <div class="stat-item">
+                  <div class="stat-icon"><img src="./Icon (4).svg" alt="Icon"></div> <div class="stat-details">
+                    <div class="stat-value"><span>828,867</span></div>
+                    <div class="stat-label">Event Bookings</div>
+                  </div>
+                </div>
+                <div class="stat-item">
+                  <div class="stat-icon"><img src="./Icon (6).svg" alt="Icon"></div> <div class="stat-details">
+                    <div class="stat-value"><span>1,926,436</span></div>
+                    <div class="stat-label">Payments</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </section>
+
+        <section class="footer-design-section">
+            <div class="container footer-design-layout">
+                <div class="footer-design-image" data-aos="fade-right" data-aos-duration="700">
+                    <img src="./pana.svg" alt="Site Footer Design Illustration">
+                </div>
+                <div class="footer-design-text" data-aos="zoom-in" data-aos-delay="200" data-aos-duration="700">
+                    <h2><span>How to design your site footer like we did</span></h2>
+                    <p>Donec a eros justo. Fusce egestas tristique ultrices. Nam tempor, augue nec tincidunt molestie, massa nunc varius arcu, at scelerisque elit erat a magna. Donec quis erat at libero ultrices mollis. In hac habitasse platea dictumst. Vivamus vehicula leo dui, at porta nisi facilisis finibus. In euismod augue vitae nisi ultricies, non aliquet urna tincidunt. Integer in nisi eget nulla commodo faucibus efficitur quis massa.</p>
+                    <a href="#" class="button button-primary">Learn More</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="testimonial-section">
+            <div class="container testimonial-layout">
+                <div class="testimonial-image-column" data-aos="fade-right" data-aos-duration="700">
+                    <img src="./image 9.svg" alt="Tim Smith" class="testimonial-portrait"> </div>
+                <div class="testimonial-content-column" data-aos="fade-left" data-aos-delay="200" data-aos-duration="700">
+                    <p class="testimonial-quote">Maecenas dignissim justo eget nulla rutrum molestie. Maecenas lobortis sem dui, vel rutrum risus tincidunt ullamcorper. Proin eu enim metus. Vivamus sed libero ornare, tristique quam in, gravida enim. Nullam ut molestie arcu, at hendrerit elit. Morbi laoreet elit at ligula molestie, nec molestie mi blandit. Suspendisse cursus tellus sed augue ultrices, quis tristique nulla sodales. Suspendisse eget lorem eu turpis vestibulum pretium. Suspendisse potenti. Quisque malesuada enim sapien, vitae placerat ante feugiat eget. Quisque vulputate odio neque, eget efficitur libero condimentum id. Curabitur id nibh id sem dignissim finibus ac sit amet magna.</p>
+                    <p class="testimonial-name">Tim Smith</p>
+                    <p class="testimonial-affiliation">British Dragon Boat Racing Association</p>
+                    <div class="testimonial-client-logos">
+                        <img src="./Logo (1).svg" alt="Client Logo">
+                        <img src="./Logo (2).svg" alt="Client Logo">
+                        <img src="./Logo (3).svg" alt="Client Logo">
+                        <img src="./Logo (4).svg" alt="Client Logo">
+                        <img src="./Logo (5).svg" alt="Client Logo">
+                        <img src="./Logo (6).svg" alt="Client Logo">
+                    </div>
+                    <a href="#" class="testimonial-link">Meet all customers &rarr;</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="blog-highlights-section">
+            <div class="container">
+                <div class="blog-section-header" data-aos="fade-up">
+                    <h2 class="section-title"><span>Caring is the new marketing</span></h2>
+                    <p class="section-subtitle blog-highlights-subtitle">The Nexcent blog is the best place to read about the latest membership insights, trends and more. See who's joining the community, read about how our community are increasing their membership income and lot's more.​</p>
+                </div>
+                <div class="blog-cards-container">
+                    <div class="blog-card" data-aos="fade-up" data-aos-delay="200">
+                        <img src="./image 18.svg" alt="Creating Streamlined Safeguarding Processes" class="blog-card-image"> <div class="blog-card-content">
+                            <h3 class="blog-card-title">Creating Streamlined Safeguarding Processes with OneRen</h3>
+                            <a href="#" class="blog-card-link">Readmore &rarr;</a>
+                        </div>
+                    </div>
+                    <div class="blog-card" data-aos="fade-up" data-aos-delay="300">
+                        <img src="./image 19.svg" alt="Safeguarding responsibilities" class="blog-card-image"> <div class="blog-card-content">
+                            <h3 class="blog-card-title">What are your safeguarding responsibilities and how can you manage them?</h3>
+                            <a href="#" class="blog-card-link">Readmore &rarr;</a>
+                        </div>
+                    </div>
+                    <div class="blog-card" data-aos="fade-up" data-aos-delay="400">
+                        <img src="./image 20.svg" alt="Revamping Membership Model" class="blog-card-image"> <div class="blog-card-content">
+                            <h3 class="blog-card-title">Revamping the Membership Model with Triathlon Australia</h3>
+                            <a href="#" class="blog-card-link">Readmore &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section" data-aos="zoom-in" data-aos-duration="600">
+            <div class="container">
+                <h2 class="cta-heading">Pellentesque suscipit fringilla libero eu.</h2>
+                <a href="#" class="button button-primary cta-button">Get Started &rarr;</a>
+            </div>
+        </section>
+    </main>
 
 
-
-
-    <section class="clients-section">
+    <footer class="site-footer-main">
         <div class="container">
-            <h2 class="section-title"><span>Our Clients</span></h2>
-            <p class="section-subtitle">We have been working with some Fortune 500+ clients</p>
-            <div class="client-logos">
-                <img src="./Logo.svg" alt="Client Logo 1">
-                <img src="./Logo (1).svg" alt="Client Logo 2">
-                <img src="./Logo (2).svg" alt="Client Logo 2">
-                <img src="./Logo (3).svg" alt="Client Logo 2">
-                <img src="./Logo (4).svg" alt="Client Logo 2">
-                <img src="./Logo (5).svg" alt="Client Logo 2">
-                <img src="./Logo (6).svg" alt="Client Logo 2">
+            <div class="footer-columns">
+                <div class="footer-column about-column">
+                    <a href="#" class="footer-logo">
+                        <img src="./Logo.svg" alt="Nexcent Logo">
+                        <span>Nexcent</span>
+                    </a>
+                    <p class="copyright-text">Copyright © 2020 Nexcent ltd.<br>All rights reserved</p>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Instagram"><img src="./icons8-instagram.svg" alt="Instagram"></a>
+                        <a href="#" aria-label="Dribbble"><img src="./icons8-dribbble.svg" alt="Dribbble"></a>
+                        <a href="#" aria-label="Twitter"><img src="./icons8-twitter.svg" alt="Twitter"></a>
+                        <a href="#" aria-label="YouTube"><img src="./icons8-youtube.svg" alt="YouTube"></a>
+                    </div>
                 </div>
-        </div>
-    </section>
 
+                <div class="footer-column links-column">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">About us</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Contact us</a></li>
+                        <li><a href="#">Pricing</a></li>
+                        <li><a href="#">Testimonials</a></li>
+                    </ul>
+                </div>
 
-    <section class="manage-community-section">
-        <div class="container">
-            <h2 class="section-title"><span>Manage your entire community in a single system</span></h2>
-            <p class="section-subtitle">Who is Nexcent suitable for?</p>
-            <div class="feature-blocks-container">
-                <div class="feature-block">
-                    <div class="feature-icon">
-                        <img src="./Icon.svg" alt="Membership Icon">
-                        </div>
-                    <h3 class="feature-title"><span>Membership Organisations</span></h3>
-                    <p class="feature-description">Our membership management software provides full automation of membership renewals and payments</p>
+                <div class="footer-column links-column">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">Help center</a></li>
+                        <li><a href="#">Terms of service</a></li>
+                        <li><a href="#">Legal</a></li>
+                        <li><a href="#">Privacy policy</a></li>
+                        <li><a href="#">Status</a></li>
+                    </ul>
                 </div>
-                <div class="feature-block">
-                    <div class="feature-icon">
-                        <img src="./Icon (1).svg" alt="National Associations Icon">
-                        </div>
-                    <h3 class="feature-title"><span>National Associations</span></h3>
-                    <p class="feature-description">Our membership management software provides full automation of membership renewals and payments</p>
+
+                <div class="footer-column newsletter-column">
+                    <h4>Stay up to date</h4>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your email address">
+                        <button type="submit" aria-label="Subscribe">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="20px" height="20px">
+                                <path d="M3.478 2.405a.75.75 0 00-.926.94l2.432 7.905H13.5a.75.75 0 010 1.5H4.984l-2.432 7.905a.75.75 0 00.926.94 60.519 60.519 0 0018.445-8.986.75.75 0 000-1.218A60.517 60.517 0 003.478 2.405z" />
+                            </svg>
+                        </button>
+                    </form>
                 </div>
-                <div class="feature-block">
-                    <div class="feature-icon">
-                        <img src="./Icon (2).svg" alt="Clubs And Groups Icon">
-                        </div>
-                    <h3 class="feature-title"><span>Clubs And Groups</span></h3>
-                    <p class="feature-description">Our membership management software provides full automation of membership renewals and payments</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="detailed-feature-section">
-        <div class="container detailed-feature-layout"> <div class="detailed-feature-image">
-                <img src="./Frame 35.svg" alt="Pixelgrade Story Illustration">
-                </div>
-            <div class="detailed-feature-text">
-                <h2><span>The unseen of spending three</span><br><span>years at Pixelgrade  </span></h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet justo ipsum. Sed accumsan quam vitae est varius fringilla. Pellentesque placerat vestibulum lorem sed porta. Nullam mattis tristique iaculis. Nullam pulvinar sit amet risus pretium auctor. Etiam quis massa pulvinar, aliquam quam vitae, tempus sem. Donec elementum pulvinar odio.</p>
-                <a href="#" class="button button-primary">Learn More</a>
             </div>
         </div>
-    </section>
+    </footer>
 
 
 
-
-
-
-
-
-    <section class="stats-section">
-        <div class="container stats-layout">
-          <div class="stats-text-column">
-            <h2><span>Helping a local business</span> <span>reinvent itself</span></h2>
-            <p>We reached here with our hard work and dedication</p>
-          </div>
-          <div class="stats-grid-column">
-            <div class="stat-item">
-              <div class="stat-icon"><img src="./Icon (3).svg" alt="Icon"></div>
-              <div class="stat-details">
-                <div class="stat-value"><span>2,245,341</span></div>
-                <div class="stat-label">Members</div>
-              </div>
-            </div>
-            <div class="stat-item">
-              <div class="stat-icon"><img src="./Icon (7).svg" alt="Icon"></div>
-              <div class="stat-details">
-                <div class="stat-value"><span>46,328</span></div>
-                <div class="stat-label">Clubs</div>
-              </div>
-            </div>
-            <div class="stat-item">
-              <div class="stat-icon"><img src="./Icon (4).svg" alt="Icon"></div>
-              <div class="stat-details">
-                <div class="stat-value"><span>828,867</span></div>
-                <div class="stat-label">Event Bookings</div>
-              </div>
-            </div>
-            <div class="stat-item">
-              <div class="stat-icon"><img src="./Icon (6).svg" alt="Icon"></div>
-              <div class="stat-details">
-                <div class="stat-value"><span>1,926,436</span></div>
-                <div class="stat-label">Payments</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-
-
-
-      <section class="footer-design-section">
-        <div class="container footer-design-layout"> <div class="footer-design-image">
-                <img src="./pana.svg" alt="Site Footer Design Illustration">
-                </div>
-            <div class="footer-design-text">
-                <h2><span>How to design your site footer like we did</span></h2>
-                <p>Donec a eros justo. Fusce egestas tristique ultrices. Nam tempor, augue nec tincidunt molestie, massa nunc varius arcu, at scelerisque elit erat a magna. Donec quis erat at libero ultrices mollis. In hac habitasse platea dictumst. Vivamus vehicula leo dui, at porta nisi facilisis finibus. In euismod augue vitae nisi ultricies, non aliquet urna tincidunt. Integer in nisi eget nulla commodo faucibus efficitur quis massa.</p>
-                <a href="#" class="button button-primary">Learn More</a>
-            </div>
-        </div>
-    </section>
     
 
-
-    <section class="testimonial-section">
-        <div class="container testimonial-layout">
-            <div class="testimonial-image-column">
-                <img src="./image 9.svg" alt="Tim Smith" class="testimonial-portrait">
-                </div>
-            <div class="testimonial-content-column">
-                <p class="testimonial-quote">Maecenas dignissim justo eget nulla rutrum molestie. Maecenas lobortis sem dui, vel rutrum risus tincidunt ullamcorper. Proin eu enim metus. Vivamus sed libero ornare, tristique quam in, gravida enim. Nullam ut molestie arcu, at hendrerit elit. Morbi laoreet elit at ligula molestie, nec molestie mi blandit. Suspendisse cursus tellus sed augue ultrices, quis tristique nulla sodales. Suspendisse eget lorem eu turpis vestibulum pretium. Suspendisse potenti. Quisque malesuada enim sapien, vitae placerat ante feugiat eget. Quisque vulputate odio neque, eget efficitur libero condimentum id. Curabitur id nibh id sem dignissim finibus ac sit amet magna.</p>
-                <p class="testimonial-name">Tim Smith</p>
-                <p class="testimonial-affiliation">British Dragon Boat Racing Association</p>
-                <div class="testimonial-client-logos">
-                    <img src="./Logo (1).svg" alt="Client Logo">
-                    <img src="./Logo (2).svg" alt="Client Logo">
-                    <img src="./Logo (3).svg" alt="Client Logo">
-                    <img src="./Logo (4).svg" alt="Client Logo">
-                    <img src="./Logo (5).svg" alt="Client Logo">
-                    <img src="./Logo (6).svg" alt="Client Logo">
-                    
-                </div>
-                <a href="#" class="testimonial-link">Meet all customers &rarr;</a>
-            </div>
-        </div>
-    </section>
-
-
-    <section class="blog-highlights-section">
-        <div class="container">
-            <div class="blog-section-header">
-                <h2 class="section-title"><span>Caring is the new marketing</span></h2>
-                <p class="section-subtitle blog-highlights-subtitle">The Nexcent blog is the best place to read about the latest membership insights, trends and more. See who's joining the community, read about how our community are increasing their membership income and lot's more.​</p>
-            </div>
-            <div class="blog-cards-container">
-                <div class="blog-card">
-                    <img src="./image 18.svg" alt="Creating Streamlined Safeguarding Processes" class="blog-card-image">
-                    <div class="blog-card-content">
-                        <h3 class="blog-card-title">Creating Streamlined Safeguarding Processes with OneRen</h3>
-                        <a href="#" class="blog-card-link">Readmore &rarr;</a>
-                    </div>
-                </div>
-                <div class="blog-card">
-                    <img src="./image 19.svg" alt="Safeguarding responsibilities" class="blog-card-image">
-                    <div class="blog-card-content">
-                        <h3 class="blog-card-title">What are your safeguarding responsibilities and how can you manage them?</h3>
-                        <a href="#" class="blog-card-link">Readmore &rarr;</a>
-                    </div>
-                </div>
-                <div class="blog-card">
-                    <img src="./image 20.svg" alt="Revamping Membership Model" class="blog-card-image">
-                    <div class="blog-card-content">
-                        <h3 class="blog-card-title">Revamping the Membership Model with Triathlon Australia</h3>
-                        <a href="#" class="blog-card-link">Readmore &rarr;</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <section class="cta-section">
-        <div class="container">
-            <h2 class="cta-heading">Pellentesque suscipit fringilla libero eu.</h2>
-            <a href="#" class="button button-primary cta-button">Get Started &rarr;</a>
-        </div>
-    </section>
-
-
-
-
-
-    <section class="sidebar-menu">
-        <a class="menu_a" href="#">Home</a>
+    <section class="sidebar-menu"> <a class="menu_a" href="#">Home</a>
         <a class="menu_a" href="#">Features</a>
         <a class="menu_a" href="#">Community</a>
         <a class="menu_a" href="#">Blog</a>
         <a class="menu_a" href="#">Pricing</a>
     </section>
 
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 700, // مدت زمان انیمیشن به میلی‌ثانیه
+        once: true,    // آیا انیمیشن فقط یک بار اجرا شود؟
+        offset: 100,   // فاصله از پایین ویوپورت برای شروع انیمیشن (پیکسل)
+        easing: 'ease-out-cubic' // نوع easing برای انیمیشن
+      });
 
 
 
 
 
-    <script src="./app.js"></script>
-    </body>
+
+
+    </script>
+    <script src="./app.js"></script> </body>
 </html>
