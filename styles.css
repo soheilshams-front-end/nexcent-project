@@ -1074,3 +1074,228 @@ span{
     background-color: #63c866;
   }
 
+
+
+  
+  /* Footer Styles (Fixed Colors) */
+.site-footer-main {
+    background-color: #263238; /* پس‌زمینه طوسی تیره اصلی فوتر */
+    color: #D1D5DB;           /* رنگ متن پیش‌فرض برای لینک‌ها و متون ثانویه */
+    padding: 60px 0;
+    font-size: 14px;
+    /* transition برای رنگ‌ها دیگر لازم نیست اگر تم روی این بخش تاثیر نمی‌گذارد */
+}
+
+.footer-columns {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 200px;
+    margin-bottom: 30px;
+}
+
+.footer-column.about-column {
+    flex-basis: 25%;
+    min-width: 250px;
+}
+
+.footer-logo {
+    display: inline-flex;
+    align-items: center;
+    margin-bottom: 20px;
+    text-decoration: none;
+}
+
+.footer-logo img {
+    height: 28px;
+    margin-right: 10px; /* برای LTR */
+    /* اگر لوگوی SVG شما تیره است و نیاز به سفید شدن دارد: */
+    /* filter: brightness(0) invert(1); */
+}
+[dir="rtl"] .footer-logo img {
+    margin-right: 0;
+    margin-left: 10px;
+}
+
+.footer-logo span {
+    font-size: 24px;
+    font-weight: 700;
+    color: #FFFFFF; /* رنگ متن لوگو (سفید) */
+    /* حذف استایل گرادینت سراسری برای این span خاص */
+    background: none;
+    -webkit-background-clip: unset;
+    background-clip: unset;
+}
+
+.copyright-text {
+    font-size: 13px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #D1D5DB; /* رنگ متن کپی‌رایت */
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1); /* پس‌زمینه نیمه‌شفاف برای آیکون‌ها */
+    transition: background-color 0.3s ease;
+}
+
+.social-icons a img { /* اگر از تگ img برای آیکون‌ها استفاده می‌کنید */
+    width: 20px;
+    height: 20px;
+    /* filter: brightness(0) invert(1); /* برای سفید کردن آیکون‌های تیره */
+}
+/* اگر از فونت آیکون یا SVG مستقیم استفاده می‌کنید: */
+.social-icons a svg { /* این استایل برای SVG که در دکمه خبرنامه استفاده شد، اینجا هم اعمال می‌شود */
+    fill: #FFFFFF; /* رنگ آیکون‌های اجتماعی (سفید) */
+    width: 18px;
+    height: 18px;
+}
+
+.social-icons a:hover {
+    background-color: #4CAF50; /* رنگ سبز برند برای هاور */
+}
+
+.footer-column h4 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #FFFFFF; /* رنگ عناوین ستون‌ها (سفید) */
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+    color: #D1D5DB; /* رنگ لینک‌های فوتر */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-column ul li a:hover {
+    color: #FFFFFF; /* رنگ هاور لینک‌ها */
+    text-decoration: underline;
+}
+
+.newsletter-form {
+    display: flex;
+    align-items: center;
+    background-color: #374151; /* پس‌زمینه تیره‌تر برای اینپوت */
+    border-radius: 5px;
+    padding: 5px;
+    max-width: 300px;
+}
+
+.newsletter-form input[type="email"] {
+    flex-grow: 1;
+    background-color: transparent;
+    border: none;
+    color: #E5E7EB; /* رنگ متن داخل اینپوت */
+    padding: 10px;
+    font-size: 14px;
+    outline: none;
+}
+
+.newsletter-form input[type="email"]::placeholder {
+    color: #9CA3AF; /* رنگ متن placeholder */
+    opacity: 1;
+}
+
+.newsletter-form button[type="submit"] {
+    background-color: #4CAF50; /* رنگ سبز برند برای دکمه */
+    border: none;
+    color: #FFFFFF; /* رنگ آیکون داخل دکمه (سفید) */
+    padding: 8px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 5px; /* برای LTR */
+    transition: background-color 0.3s ease;
+}
+[dir="rtl"] .newsletter-form button[type="submit"] {
+    margin-left: 0;
+    margin-right: 5px;
+}
+
+.newsletter-form button[type="submit"]:hover {
+    background-color: #45a049; /* رنگ هاور سبز برند */
+}
+.newsletter-form button[type="submit"] svg {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+}
+
+/* ===== استایل‌های ریسپانسیو برای فوتر ===== */
+/* اینها را داخل مدیا کوئری‌های موجود خود یا به صورت جداگانه بعد از استایل‌های اصلی فوتر قرار دهید */
+
+/* Tablet and Larger Mobile Devices (e.g., up to 992px) */
+@media (max-width: 992px) {
+    .footer-column {
+        min-width: calc(50% - 15px);
+        flex-basis: calc(50% - 15px);
+    }
+    .footer-column.about-column {
+        flex-basis: 100%;
+        min-width: 100%;
+        text-align: center;
+    }
+    .footer-logo {
+        justify-content: center;
+    }
+    .social-icons {
+        justify-content: center;
+    }
+    .newsletter-form {
+        margin: 0 auto;
+    }
+}
+
+/* Smaller Mobile Devices (e.g., up to 767px) */
+@media (max-width: 767px) {
+    .footer-columns {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .footer-column {
+        min-width: 100%;
+        flex-basis: 100%;
+        /* text-align: center; از والد به ارث می‌برد */
+    }
+    .footer-column h4 {
+        margin-top: 20px;
+    }
+    .footer-column:first-child h4 { /* اولین ستون در حالت موبایل معمولاً نیازی به مارجین بالا ندارد */
+        margin-top: 0;
+    }
+    .footer-column ul li a,
+    .footer-column p {
+        text-align: center !important; /* برای اطمینان از وسط‌چین شدن */
+    }
+}
