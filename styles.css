@@ -633,6 +633,7 @@ body {
     padding: 2rem 1rem;
     transition: 0.5s all;
     z-index: 1234567;
+    
 }
 
         
@@ -1006,6 +1007,7 @@ body {
     background-color: #263238; /* رنگ خطوط همبرگر */
     border-radius: 3px;
     transition: all 0.3s ease-in-out;
+    
 }
 
 .menu_a{
@@ -1019,11 +1021,12 @@ body {
     -webkit-background-clip: text; /* برای سازگاری با مرورگرهای WebKit */
     background-clip: text;
     color: transparent;
+    
 }
 
 .menu_a:hover {
     transform: translateX(25px);
-    font-size: 24px;
+
     
     /* اعمال گرادینت به متن */
   
@@ -1298,4 +1301,11 @@ span{
     .footer-column p {
         text-align: center !important; /* برای اطمینان از وسط‌چین شدن */
     }
+}
+
+.white__line{
+    color: white;
+    margin-top: -1rem;
+    margin-left: rem;
+    
 }
