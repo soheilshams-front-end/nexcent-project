@@ -1,0 +1,1076 @@
+/* تنظیمات اولیه و فونت */
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: #f5f7fa;
+    color: #4D4D4D;
+}
+
+/* ===== این تعریف صحیح و تنها تعریف برای .container عمومی است ===== */
+.container {
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+/* استایل‌های هدر */
+.site-header {
+    background-color: #FFFFFF;
+    padding: 20px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 123456;
+    box-shadow: 0 0 0.5rem #4CAF50;
+}
+
+/* ===== این استایل flex را به .container داخل هدر اعمال می‌کند ===== */
+.site-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: 700;
+    color: #263238;
+    text-decoration: none;
+}
+
+.main-navigation ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.main-navigation li {
+    margin-left: 30px;
+}
+
+[dir="rtl"] .main-navigation li {
+    margin-left: 0;
+    margin-right: 30px;
+}
+
+.main-navigation a {
+    text-decoration: none;
+    color: #4D4D4D;
+    font-size: 16px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.main-navigation a:hover,
+.main-navigation a.active {
+    color: #4CAF50;
+}
+
+/* استایل دکمه */
+.button {
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 500;
+    display: inline-block;
+    text-align: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.button-primary {
+    background-color: #4CAF50;
+    color: #FFFFFF;
+}
+
+.js__menu{
+    display: none;
+    width: 30px;
+    height: 30px;
+    transition: 300ms all 70ms;
+    
+    
+}
+
+.js__menu:hover{
+    color: #45a049;
+}
+
+.button-primary:hover {
+    background-color: #45a049;
+}
+
+/* استایل‌های بخش Hero */
+.hero-section {
+    background-color: #F5F7FA; /* یا #FFFFFF اگر مطابق طرح اصلی است */
+    padding: 60px 0;
+    /* text-align برای این بخش لازم نیست اگر فرزندانش خودشان چیدمان دارند */
+}
+
+/* .hero-container به .container عمومی (که flex نیست) اضافه می‌شود و flex را برای این بخش فراهم می‌کند */
+/* این تعریف .hero-container صحیح و تنها تعریف مورد نیاز است */
+.hero-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.hero-text {
+    flex-basis: 45%;
+    max-width: 500px;
+    text-align: left; /* برای متن‌های انگلیسی یا اگر dir="ltr" باشد */
+}
+
+[dir="rtl"] .hero-text {
+    text-align: right; /* برای متن‌های فارسی */
+}
+
+.hero-text h1 {
+    font-size: 54px;
+    font-weight: 600;
+    color: #263238;
+    line-height: 1.2;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.hero-text p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #4D4D4D;
+    margin-bottom: 30px;
+}
+
+.hero-button {
+    padding: 14px 30px;
+    font-size: 16px;
+}
+
+/* این تعریف .hero-image صحیح و تنها تعریف مورد نیاز است */
+.hero-image {
+    flex-basis: 50%;
+    text-align: center; /* برای اطمینان از وسط بودن تصویر اگر کوچکتر از والدش باشد */
+}
+
+/* ===== مهم: margin-left: 15rem; از اینجا حذف شده است ===== */
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-left: 15rem;
+}
+
+/* استایل نقاط کروسل */
+.hero-carousel-dots {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.hero-carousel-dots .dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #E0E0E0;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.hero-carousel-dots .dot.active {
+    background-color: #4CAF50;
+}
+
+/* استایل‌های بخش مشتریان ما */
+.clients-section {
+    background-color: #FFFFFF;
+    padding: 60px 0;
+    text-align: center; /* این برای وسط‌چین کردن متن داخل h2 و p و خود div.client-logos مهم است */
+}
+
+.clients-section .section-title {
+    font-size: 36px;
+    font-weight: 600;
+    color: #263238;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.clients-section .section-subtitle {
+    font-size: 16px;
+    color: #717171;
+    line-height: 1.6;
+    margin-bottom: 40px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.client-logos {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    /* این div چون والدش text-align:center دارد و خودش inline-block نیست، با margin auto وسط چین نمیشود
+       اما چون .container والدش محدودیت عرض دارد و این یک block است، در مرکز آن block قرار میگیرد.
+       همچنین text-align:center والدش به آن ارث نمیرسد چون display:flex دارد. */
+}
+
+.client-logos img {
+    max-height: 55px;
+    width: 55px;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+
+}
+
+.client-logos img:hover {
+    opacity: 1;
+}
+
+/* کلاس .header-container-flex اگر در HTML استفاده نشده، ضرورتی ندارد */
+/* .header-container-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+} */
+
+.manage-community-section {
+    background-color: #F5F7FA; /* پس‌زمینه روشن مشابه بدنه، یا #FFFFFF اگر بخش قبلی روشن بوده */
+    padding: 80px 0;
+    text-align: center; /* برای وسط‌چین کردن عنوان و زیرعنوان اصلی بخش */
+}
+
+/* .section-title و .section-subtitle از قبل تعریف شده و اینجا هم استفاده می‌شوند */
+/* اگر نیاز به تغییر استایل آن‌ها خاص برای این بخش بود، می‌توانید بنویسید: */
+/* .manage-community-section .section-title { ... } */
+/* .manage-community-section .section-subtitle { ... } */
+
+
+.feature-blocks-container {
+    display: flex;
+    justify-content: space-between; /* یا space-around برای فاصله بیشتر */
+    align-items: flex-start; /* اگر ارتفاع بلوک‌ها متفاوت بود، از بالا تراز شوند */
+    gap: 30px; /* فاصله بین بلوک‌ها */
+    margin-top: 40px; /* فاصله از زیرعنوان */
+    text-align: center; /* برای وسط‌چین کردن محتوای داخل هر feature-block اگر خودشان text-align ندارند */
+}
+
+.feature-block {
+    flex-basis: calc(33.333% - 20px); /* محاسبه عرض برای سه ستون با در نظر گرفتن gap (30px * 2 / 3) */
+    /* اگر gap: 30px باشد، flex-basis: calc(33.333% - (30px * 2 / 3)) یعنی calc(33.333% - 20px) */
+    /* یا ساده‌تر: flex: 1; اگر می‌خواهید به طور مساوی تقسیم شوند و با max-width کنترل کنید */
+    /* padding: 20px; اگر هر بلوک پس‌زمینه یا کادر جداگانه داشت */
+}
+
+.feature-icon {
+    margin-bottom: 15px;
+    
+}
+
+.feature-icon img {
+    max-width: 75px; /* اندازه آیکون‌ها */
+    height: 75px;
+}
+
+.feature-title {
+    font-size: 24px; /* اندازه عنوان هر بلوک */
+    color: #263238; /* رنگ عنوان بلوک */
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.feature-description {
+    font-size: 14px; /* اندازه متن توضیحات */
+    color: #717171; /* رنگ متن توضیحات */
+    line-height: 1.7;
+    padding: 0 10px; /* کمی پدینگ چپ و راست برای خوانایی بهتر متن در مرکز */
+}
+
+.detailed-feature-section {
+    background-color: #FFFFFF; /* پس‌زمینه سفید برای این بخش */
+    padding: 80px 0;
+}
+
+.detailed-feature-layout { /* این کلاس به .container این بخش اضافه شده تا flex شود */
+    display: flex;
+    align-items: center; /* برای تراز عمودی محتوای دو ستون در مرکز */
+    justify-content: space-between; /* برای ایجاد فاصله اگر لازم باشد، یا از gap استفاده کنید */
+    gap: 60px; /* فاصله بین ستون تصویر و ستون متن */
+}
+
+.detailed-feature-image {
+    flex-basis: 45%; /* عرض ستون تصویر */
+    /* می‌توان یک max-width هم برای تصویر در نظر گرفت اگر لازم باشد */
+}
+
+.detailed-feature-image img {
+    max-width: 400px;
+    height: 400px;
+    display: block; /* برای حذف فضای اضافی احتمالی زیر تصویر */
+    border-radius: 8px; /* اگر گوشه‌های تصویر گرد است، اختیاری */
+}
+
+.detailed-feature-text {
+    flex-basis: 50%; /* عرض ستون متن */
+    text-align: left; /* برای زبان انگلیسی یا اگر dir="ltr" باشد */
+}
+
+[dir="rtl"] .detailed-feature-text {
+    text-align: right; /* برای زبان فارسی */
+}
+
+.detailed-feature-text h2 {
+    font-size: 32px; /* اندازه عنوان */
+    font-weight: 600;
+    color: #263238; /* رنگ عنوان */
+    margin-top: 0;
+    margin-bottom: 20px;
+    line-height: 1.3;
+}
+
+.detailed-feature-text p {
+    font-size: 16px;
+    color: #717171; /* رنگ متن پاراگراف */
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+/* دکمه Learn More از استایل‌های .button و .button-primary که قبلا تعریف شده استفاده می‌کند */
+/* اگر نیاز به استایل خاصی برای این دکمه بود: */
+/* .detailed-feature-text .button { ... } */
+
+
+
+.stats-section {
+    padding: 80px 0;
+    background-color: #F5F7FA;
+  }
+  
+  .stats-layout {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+  }
+  
+  .stats-text-column {
+    flex-basis: 40%;
+  }
+  
+  .stats-text-column h2 {
+    font-size: 32px;
+    color: #263238;
+    margin-bottom: 10px;
+  }
+  
+  .stats-text-column p {
+    font-size: 16px;
+    color: #717171;
+    line-height: 1.5;
+  }
+  
+  .stats-grid-column {
+    flex-basis: 55%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+  
+  .stat-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .stat-icon img {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .stat-value {
+    font-size: 24px;
+    font-weight: 600;
+    color: #263238;
+  }
+  
+  .stat-label {
+    font-size: 14px;
+    color: #717171;
+  }
+
+  .footer-design-section {
+    background-color: #FFFFFF; /* پس‌زمینه سفید */
+    padding: 80px 0;
+    }
+    
+    .footer-design-layout { /* این کلاس به .container این بخش اضافه شده تا flex شود */
+    display: flex;
+    align-items: center; /* تراز عمودی محتوای دو ستون در مرکز */
+    justify-content: space-between;
+    gap: 60px; /* فاصله بین ستون تصویر و ستون متن */
+    }
+    
+    .footer-design-image {
+    flex-basis: 45%; /* عرض ستون تصویر */
+    }
+    
+    .footer-design-image img {
+    max-width: 300px;
+    height: 300px;
+    display: block;
+    border-radius: 8px; /* اختیاری، اگر تصویر گوشه گرد دارد */
+    }
+    
+    .footer-design-text {
+    flex-basis: 50%; /* عرض ستون متن */
+    text-align: left; /* برای زبان انگلیسی یا اگر dir="ltr" باشد */
+    }
+    
+   
+    .testimonial-section {
+        background-color: #f5f7fa; /* یک سبز بسیار روشن، مانند #F0FFF0 یا #E6F4EA */
+        padding: 80px 0;
+    }
+    
+    .testimonial-layout { /* این کلاس به .container این بخش اضافه شده تا flex شود */
+        display: flex;
+        align-items: center; /* تراز عمودی ستون‌ها */
+        gap: 60px; /* فاصله بین ستون تصویر و ستون محتوا */
+    }
+    
+    .testimonial-image-column {
+        flex-basis: 30%; /* عرض ستون تصویر */
+        text-align: center; /* برای وسط‌چین کردن تصویر اگر عرض کمتری داشته باشد */
+    }
+    
+    .testimonial-portrait {
+        width: 350px; /* عرض تصویر پرتره */
+        height: 350px; /* ارتفاع تصویر پرتره */
+        border-radius: 0.5rem; /* برای دایره‌ای کردن تصویر */
+        object-fit: cover; /* برای اطمینان از پر شدن دایره بدون تغییر نسبت تصویر */
+    }
+    
+    .testimonial-content-column {
+        flex-basis: 65%; /* عرض ستون محتوا */
+        text-align: left; /* برای زبان انگلیسی یا اگر dir="ltr" باشد */
+    }
+    
+    [dir="rtl"] .testimonial-content-column {
+        text-align: right; /* برای زبان فارسی */
+    }
+    
+    .testimonial-quote {
+        font-size: 16px; /* اندازه فونت نقل قول */
+        color: #333333; /* رنگ تیره‌تر برای خوانایی بهتر روی پس‌زمینه روشن */
+        line-height: 1.8;
+        margin-top: 0;
+        margin-bottom: 25px;
+        /* font-style: italic; */ /* اگر می‌خواهید متن نقل قول کج باشد */
+    }
+    
+    .testimonial-name {
+        font-size: 20px;
+        color: #4CAF50; /* رنگ سبز برند */
+        font-weight: 600;
+        margin-bottom: 5px;
+    }
+    
+    .testimonial-affiliation {
+        font-size: 14px;
+        color: #555555; /* کمی تیره‌تر از خاکستری معمول */
+        margin-bottom: 30px;
+    }
+    
+    .testimonial-client-logos {
+        display: flex;
+        flex-wrap: wrap; /* اگر لوگوها در یک خط جا نشدند، به خط بعدی بروند */
+        align-items: center;
+        gap: 20px; /* فاصله بین لوگوها */
+        margin-bottom: 30px;
+    }
+    
+    .testimonial-client-logos img {
+        max-height: 50px; /* ارتفاع کوچک برای این لوگوها */
+        width: 50px;
+        opacity: 0.8; /* کمی شفافیت برای لوگوهای خاکستری */
+    }
+    
+    .testimonial-link {
+        color: #4CAF50; /* رنگ سبز برند */
+        font-weight: 600;
+        font-size: 16px;
+        text-decoration: none;
+        display: inline-block; /* برای اعمال margin-top اگر لازم باشد */
+    }
+    
+    .testimonial-link:hover {
+        text-decoration: underline;
+    }
+    
+
+    .blog-highlights-section {
+        background-color: #F5F7FA; /* پس‌زمینه خاکستری روشن */
+        padding: 80px 0;
+        }
+        
+        .blog-section-header {
+        text-align: center;
+        margin-bottom: 40px;
+        }
+        
+        /* .section-title از قبل تعریف شده */
+        /* .section-subtitle از قبل تعریف شده */
+        .blog-highlights-subtitle { /* برای تنظیم عرض خاص این زیرعنوان */
+        max-width: 750px; /* عرض بیشتر برای این زیرعنوان */
+        margin-left: auto;
+        margin-right: auto;
+        }
+        
+        .blog-cards-container {
+        display: flex;
+        justify-content: space-between; /* یا space-around اگر فاصله بیشتری لازم است */
+        gap: 30px; /* فاصله بین کارت‌ها */
+        margin-top: 30px; /* فاصله از هدر بخش وبلاگ */
+        }
+        
+        .blog-card {
+        background-color: #FFFFFF; /* پس‌زمینه سفید برای کارت‌ها */
+        border-radius: 8px; /* گوشه‌های گرد */
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* سایه ملایم */
+        /* flex-basis: calc(33.333% - 20px); عرض هر کارت با در نظر گرفتن gap (30px * 2 / 3) */
+        /* یا ساده‌تر: */
+        flex: 1; /* برای تقسیم مساوی عرض بین کارت‌ها */
+        min-width: 280px; /* حداقل عرض برای هر کارت در صفحات کوچکتر قبل از شکستن */
+        display: flex; /* برای چیدمان عمودی محتوای کارت و امکان کشیدگی */
+        flex-direction: column; /* آیتم‌های داخل کارت عمودی چیده شوند */
+        }
+        
+        .blog-card-image {
+        width: 100%;
+        height: 200px; /* ارتفاع ثابت برای تصاویر کارت */
+        object-fit: cover; /* برای اطمینان از پر شدن فضا بدون تغییر نسبت تصویر */
+        border-top-left-radius: 8px; /* گرد کردن گوشه‌های بالا مطابق با کارت */
+        border-top-right-radius: 8px;
+        display: block;
+        }
+        
+        .blog-card-content {
+        padding: 20px 25px 25px; /* پدینگ داخلی محتوای کارت */
+        text-align: center; /* برای وسط‌چین کردن عنوان و لینک */
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between; /* برای اینکه لینک "Readmore" به پایین بچسبد */
+        flex-grow: 1; /* برای اینکه این بخش فضای باقی‌مانده کارت را پر کند */
+        }
+        
+        .blog-card-title {
+        font-size: 18px;
+        font-weight: 600;
+        color: #4D4D4D; /* رنگ عنوان کارت */
+        line-height: 1.5;
+        margin-top: 0;
+        margin-bottom: 15px;
+        min-height: 80px; /* حداقل ارتفاع برای عنوان تا لینک‌ها هم‌تراز شوند (نیاز به تنظیم دقیق‌تر دارد) */
+        }
+        
+        .blog-card-link {
+        color: #4CAF50; /* رنگ سبز برند */
+        font-weight: 600;
+        font-size: 16px;
+        text-decoration: none;
+        display: inline-block; /* یا block اگر می‌خواهید تمام عرض باشد */
+        margin-top: auto; /* این باعث می‌شود لینک به پایین‌ترین قسمت .blog-card-content برود */
+        }
+        
+        .blog-card-link:hover {
+        text-decoration: underline;
+        }
+
+
+        .cta-section {
+            background-color: #263238; /* یک رنگ تیره، مطابق با رنگ لوگو یا متن‌های تیره */
+            padding: 100px 0; /* پدینگ زیاد برای برجسته کردن بخش */
+            text-align: center; /* برای وسط‌چین کردن محتوا */
+        }
+        
+        .cta-heading {
+            font-size: 40px; /* اندازه فونت بزرگ برای عنوان */
+            font-weight: 600;
+            color: #FFFFFF; /* رنگ سفید برای متن روی پس‌زمینه تیره */
+            line-height: 1.4;
+            max-width: 750px; /* محدود کردن عرض عنوان برای خوانایی بهتر در صورت طولانی بودن */
+            margin-top: 0;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 40px; /* فاصله تا دکمه */
+        }
+        
+        .cta-button {
+            padding: 16px 36px; /* کمی پدینگ بیشتر برای دکمه CTA */
+            font-size: 16px; /* اندازه فونت دکمه */
+            /* سایر استایل‌ها از .button و .button-primary ارث‌بری می‌شود */
+            /* margin-top: 0; چون فاصله از طریق margin-bottom عنوان ایجاد شده */
+        }
+
+
+        
+
+.sidebar-menu{
+    position: fixed;
+    top: 0;
+    left: -208px;
+    bottom: 0;
+    background: #4CAF50;
+    width: 11rem;
+    display: none;
+    flex-direction: column;
+    padding: 2rem 1rem;
+    transition: 0.5s all;
+    z-index: 1234567;
+}
+
+        
+        /* =============================================== */
+/* ========== Media Queries for Responsiveness ========== */
+/* =============================================== */
+
+/* Tablet and Larger Mobile Devices (e.g., up to 992px) */
+@media (max-width: 992px) {
+    .container {
+        max-width: 90%; /* کمی عرض بیشتر برای تبلت */
+    }
+
+    /* Header */
+    .main-navigation {
+        /* در این مرحله هنوز منوی کامل را نمایش می‌دهیم، اما ممکن است فضا کمتر شود */
+        /* در مرحله بعد (موبایل) آن را مخفی می‌کنیم */
+    }
+    .main-navigation li {
+        margin-left: 20px; /* کاهش فاصله آیتم‌های منو */
+    }
+    [dir="rtl"] .main-navigation li {
+        margin-left: 0;
+        margin-right: 20px;
+    }
+
+    .sidebar-menu{
+        display: none;
+    }
+
+    /* Hero Section */
+    .hero-container {
+        gap: 30px; /* کاهش فاصله بین متن و تصویر */
+    }
+    .hero-text h1 {
+        font-size: 44px;
+    }
+
+    /* Manage Community Section - Feature Blocks */
+    .feature-blocks-container {
+        gap: 20px; /* کاهش فاصله بین بلوک‌های ویژگی */
+    }
+    .feature-title {
+        font-size: 22px;
+    }
+
+    /* Detailed Feature Section (Pixelgrade & Footer Design) */
+    .detailed-feature-layout,
+    .footer-design-layout {
+        gap: 30px; /* کاهش فاصله بین ستون‌ها */
+    }
+    .detailed-feature-text h2,
+    .footer-design-text h2 {
+        font-size: 28px;
+    }
+
+    /* Stats Section */
+    .stats-layout {
+        gap: 30px;
+    }
+    .stats-text-column h2 {
+        font-size: 28px;
+    }
+    .stats-grid-column {
+        gap: 20px; /* کاهش فاصله در گرید آمار */
+    }
+    .stat-value {
+        font-size: 20px;
+    }
+
+    /* Testimonial Section */
+    .testimonial-layout {
+        gap: 30px;
+    }
+    .testimonial-image-column {
+        flex-basis: 35%;
+    }
+    .testimonial-content-column {
+        flex-basis: 60%;
+    }
+    .testimonial-quote {
+        font-size: 15px;
+    }
+    .testimonial-name {
+        font-size: 18px;
+    }
+
+
+    /* Blog Highlights Section */
+    .blog-cards-container {
+        gap: 20px;
+    }
+    .blog-card-title {
+        font-size: 17px;
+        min-height: 70px; /* تنظیم مجدد برای تبلت */
+    }
+
+    /* CTA Section */
+    .cta-heading {
+        font-size: 32px;
+    }
+}
+
+
+/* Smaller Mobile Devices (e.g., up to 767px) */
+@media (max-width: 767px) {
+    .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .sidebar-menu{
+        display: flex;
+    }
+    
+    /* General Section Padding */
+    .site-header,
+    .hero-section,
+    .clients-section,
+    .manage-community-section,
+    .detailed-feature-section,
+    .stats-section,
+    .footer-design-section,
+    .testimonial-section,
+    .blog-highlights-section,
+    .cta-section {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+    .cta-section {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+
+    /* Header */
+    .site-header .container {
+        /* برای همبرگر منو، ممکن است بخواهید لوگو در یک سمت و همبرگر در سمت دیگر باشد */
+        /* یا لوگو وسط و همبرگر در یک سمت */
+    }
+    .main-navigation {
+        display: none; /* مخفی کردن منوی اصلی */
+        /* استایل‌های منوی موبایل در ادامه می‌آید (اگر باز شود) */
+        /* position: absolute; */
+        /* top: 70px; /* زیر هدر */
+        /* left: 0; */
+        /* right: 0; */
+        /* background-color: #FFFFFF; */
+        /* box-shadow: 0 4px 8px rgba(0,0,0,0.1); */
+        /* z-index: 100; */
+    }
+    .main-navigation.active { /* این کلاس با جاوااسکریپت اضافه می‌شود */
+        /* display: block; */
+    }
+    .main-navigation ul {
+        flex-direction: column; /* آیتم‌های منو زیر هم */
+        width: 100%;
+        align-items: center; /* وسط چین کردن آیتم ها */
+    }
+    .main-navigation li {
+        margin: 10px 0; /* فاصله عمودی بین آیتم‌های منو */
+        width: 100%;
+        text-align: center;
+    }
+    .main-navigation a {
+        padding: 10px 0;
+        display: block; /* برای اینکه کل عرض li را بگیرد */
+    }
+
+    /* Placeholder for Hamburger Icon - Add HTML for this */
+    /* <button class="hamburger-menu"><span></span><span></span><span></span></button> */
+    .hamburger-menu { /* شما باید یک دکمه با این کلاس در HTML هدر اضافه کنید */
+        display: block; /* نمایش دکمه همبرگری */
+        /* استایل‌های ظاهری دکمه همبرگری در اینجا */
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 10px;
+        /* (برای سادگی، استایل خود آیکن همبرگر را اینجا نمی‌آورم، می‌توانید از SVG یا FontAwesome استفاده کنید) */
+        /* یا با 3 span بسازید */
+    }
+    .logo {
+        font-size: 24px;
+    }
+
+
+    /* Hero Section */
+    .hero-container {
+        flex-direction: column; /* ستون‌ها زیر هم */
+        text-align: center;
+    }
+    .hero-text {
+        flex-basis: auto; /* عرض کامل */
+        max-width: 100%;
+        margin-bottom: 30px; /* فاصله بین متن و تصویر */
+        text-align: center;
+    }
+    [dir="rtl"] .hero-text {
+        text-align: center;
+    }
+    .hero-text h1 {
+        font-size: 36px;
+    }
+    .hero-text p {
+        font-size: 15px;
+    }
+    .hero-image {
+        flex-basis: auto; /* عرض کامل */
+    }
+    .hero-image img {
+        margin-left: 0; /* حذف مارجین اضافی از تصویر Hero که قبلا مشکل‌ساز بود */
+    }
+
+    /* Our Clients */
+    .client-logos {
+        justify-content: center; /* وسط چین کردن لوگوها اگر کمتر از یک ردیف کامل باشند */
+        gap: 20px;
+    }
+    .client-logos img {
+        max-height: 30px; /* کوچک‌تر کردن لوگوها */
+    }
+
+
+    /* Manage Community Section - Feature Blocks */
+    .feature-blocks-container {
+        flex-direction: column; /* ستون‌ها زیر هم */
+        align-items: center; /* وسط چین کردن بلوک‌ها */
+        gap: 30px;
+    }
+    .feature-block {
+        flex-basis: 80%; /* عرض بلوک‌ها */
+        max-width: 350px; /* حداکثر عرض برای هر بلوک */
+    }
+    .feature-title {
+        font-size: 20px;
+    }
+    .feature-description {
+        font-size: 14px;
+    }
+
+    /* Detailed Feature (Pixelgrade & Footer Design) & Stats Sections */
+    .detailed-feature-layout,
+    .footer-design-layout,
+    .stats-layout {
+        flex-direction: column; /* ستون‌ها زیر هم */
+        text-align: center;
+    }
+    .detailed-feature-image,
+    .footer-design-image,
+    .stats-text-column {
+        flex-basis: auto;
+        margin-bottom: 30px; /* فاصله بین ستون تصویر/متن و ستون بعدی */
+        text-align: center;
+    }
+    [dir="rtl"] .detailed-feature-text,
+    [dir="rtl"] .footer-design-text,
+    [dir="rtl"] .stats-text-column {
+        text-align: center;
+    }
+
+    .detailed-feature-text,
+    .footer-design-text,
+    .stats-grid-column {
+        flex-basis: auto;
+        text-align: center;
+    }
+    .detailed-feature-text h2,
+    .footer-design-text h2,
+    .stats-text-column h2 {
+        font-size: 26px;
+    }
+    .stats-grid-column {
+        grid-template-columns: 1fr; /* آمارها زیر هم یا اگر جا بود repeat(2, 1fr) */
+        /* برای موبایل‌های خیلی کوچک، ۱ ستون بهتر است */
+        /* اگر می‌خواهید در موبایل هم ۲ ستونه باشد، این خط را کامنت کنید یا تغییر دهید */
+        gap: 20px;
+        width: 100%;
+        max-width: 380px; /* برای اینکه خیلی کشیده نشود */
+        margin: 0 auto;
+    }
+    .stat-details, [dir="rtl"] .stat-details {
+        text-align: left; /* برای تراز بهتر متن آمار در موبایل */
+    }
+
+
+    /* Testimonial Section */
+    .testimonial-layout {
+        flex-direction: column;
+        text-align: center;
+    }
+    .testimonial-image-column {
+        flex-basis: auto;
+        margin-bottom: 30px;
+    }
+    .testimonial-content-column {
+        flex-basis: auto;
+        text-align: center;
+    }
+    [dir="rtl"] .testimonial-content-column {
+        text-align: center;
+    }
+    .testimonial-quote {
+        font-size: 14px;
+    }
+    .testimonial-client-logos {
+        justify-content: center; /* وسط چین کردن لوگوها */
+    }
+
+
+    /* Blog Highlights Section */
+    .blog-section-header .section-title {
+        font-size: 28px;
+    }
+    .blog-highlights-subtitle {
+        font-size: 14px;
+    }
+    .blog-cards-container {
+        flex-direction: column; /* کارت‌ها زیر هم */
+        align-items: center; /* وسط چین کردن کارت‌ها */
+        gap: 25px;
+    }
+    .blog-card {
+        flex-basis: 90%; /* عرض کارت‌ها */
+        max-width: 380px; /* حداکثر عرض برای هر کارت */
+    }
+    .blog-card-title {
+        font-size: 16px;
+        min-height: auto; /* حذف ارتفاع ثابت برای عنوان کارت در موبایل */
+    }
+
+
+    /* CTA Section */
+    .cta-heading {
+        font-size: 28px;
+        line-height: 1.3;
+    }
+    .cta-button {
+        padding: 14px 30px;
+        font-size: 15px;
+    }
+
+    .button-primary{
+        display: none;
+    }
+
+    .js__menu{
+        display: inline-block;
+    }
+}
+
+
+/* داخل @media (max-width: 767px) */
+.hamburger-menu {
+    display: flex; /* یا block */
+    flex-direction: column;
+    justify-content: space-around;
+    width: auto;
+    height: 25px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 101; /* بالاتر از سایر عناصر هدر باشد */
+    /* order: -1; /* برای اینکه اول در هدر نمایش داده شود اگر لازم است */
+}
+
+.hamburger-menu span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #263238; /* رنگ خطوط همبرگر */
+    border-radius: 3px;
+    transition: all 0.3s ease-in-out;
+}
+
+.menu_a{
+    text-decoration: none;
+    font-size: 22px;
+    padding: 0.8rem ;
+    padding-left: 0.5rem;
+    transition: 300ms all 100ms ;
+    border-radius: 0.5rem;
+    background: linear-gradient(to left , #1cff2b, #fff); /* یا background-image */
+    -webkit-background-clip: text; /* برای سازگاری با مرورگرهای WebKit */
+    background-clip: text;
+    color: transparent;
+}
+
+.menu_a:hover {
+    transform: translateX(25px);
+    font-size: 24px;
+    
+    /* اعمال گرادینت به متن */
+  
+    /* اگر با color: transparent مشکل داشتید، این را هم امتحان کنید: */
+    /* -webkit-text-fill-color: transparent; */
+  } 
+
+/* اگر می‌خواهید دکمه Register Now در موبایل مخفی شود */
+.header-register-button {
+    /* display: none; */ /* اگر می‌خواهید مخفی شود */
+}
+
+span{
+    background: linear-gradient(to left , #4CAF50, #263238); /* یا background-image */
+    -webkit-background-clip: text; /* برای سازگاری با مرورگرهای WebKit */
+    background-clip: text;
+    color: transparent;
+}
+
+/* استایل‌های استاندارد برای Firefox و مرورگرهای جدید */
+/* انتخاب‌گر می‌تواند html یا body یا یک عنصر خاص باشد */
+.scrollable-element, html {
+    scrollbar-width: thin;
+    scrollbar-color: #4CAF50 #c2f3c3; /* thumb track */
+  }
+  
+  /* استایل‌های WebKit برای Chrome, Safari, Edge, Opera */
+  .scrollable-element::-webkit-scrollbar,
+  html::-webkit-scrollbar {
+    width: 12px;
+  }
+  
+  .scrollable-element::-webkit-scrollbar-track,
+  html::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+  }
+  
+  .scrollable-element::-webkit-scrollbar-thumb,
+  html::-webkit-scrollbar-thumb {
+    background-color: #63c866;
+    border-radius: 10px;
+    border: 3px solid #f1f1f1; /* ایجاد یک حاشیه هم‌رنگ با track برای ظاهر بهتر */
+  }
+  
+  .scrollable-element::-webkit-scrollbar-thumb:hover,
+  html::-webkit-scrollbar-thumb:hover {
+    background-color: #63c866;
+  }
+
